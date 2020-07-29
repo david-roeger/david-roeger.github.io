@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Der Prozess</title>
+  <title>Der Prozeß</title>
   <meta name="author" content="david">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
@@ -13,28 +13,28 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="fw_400">Der Prozess</h1>
+            <h1 class="fw_400">Der Prozeß</h1>
             <p class="fs_2rem">Ein Multimodales Erlebnis</p>
         </header>
         <div class="container content_container">
         <div class="controls">
             <div class="control_group">
                 <div class="control_toplevel">
-                    <h3 class="margin_0 fw_400">Ton</h3>
+                    <h3 class="margin_0 fw_400">Audio</h3>
                     <div class="toggle_container">
                         <input class="margin_0" type="checkbox" id="audioTopLevelInput">
                         <div class="toggle"></div>
                     </div>
                 </div>
                 <div id="audio_secondlevel_0" class="control_secondlevel hide">
-                    <p class="margin_0">Audio</p>
+                    <p class="margin_0">1. Grad</p>
                     <div class="select_container">
                         <input id="audio_secondlevel_0_input" class="margin_0" type="checkbox">
                         <div class="select"></div>
                     </div>
                 </div>
                 <div id="audio_secondlevel_1" class="control_secondlevel hide">
-                    <p class="margin_0">Audio</p>
+                    <p class="margin_0">2. Grad</p>
                     <div class="select_container">
                         <input id="audio_secondlevel_1_input" class="margin_0" type="checkbox">
                         <div class="select"></div>
@@ -50,14 +50,14 @@
                     </div>
                 </div>
                 <div id="mov_secondlevel_0" class="control_secondlevel hide">
-                    <p class="margin_0">mov</p>
+                    <p class="margin_0">1. Grad</p>
                     <div class="select_container">
                         <input id="mov_secondlevel_0_input" class="margin_0" type="checkbox">
                         <div class="select"></div>
                     </div>
                 </div>
                 <div id="mov_secondlevel_1" class="control_secondlevel hide">
-                    <p class="margin_0">mov</p>
+                    <p class="margin_0">2. Grad</p>
                     <div class="select_container">
                         <input id="mov_secondlevel_1_input" class="margin_0" type="checkbox">
                         <div class="select"></div>
@@ -73,14 +73,14 @@
                     </div>
                 </div>
                 <div id="text_secondlevel_0" class="control_secondlevel hide">
-                    <p class="margin_0">Text</p>
+                    <p class="margin_0">1. Grad</p>
                     <div class="select_container">
                         <input id="text_secondlevel_0_input" class="margin_0" type="checkbox">
                         <div class="select"></div>
                     </div>
                 </div>
                 <div id="text_secondlevel_1" class="control_secondlevel hide">
-                    <p class="margin_0">Text</p>
+                    <p class="margin_0">2. Grad</p>
                     <div class="select_container">
                         <input id="text_secondlevel_1_input" class="margin_0" type="checkbox">
                         <div class="select"></div>
@@ -89,18 +89,35 @@
             </div>
         </div>
         <main class="media">
-            <div class="state_container"></div>
-            <div class="audio_container">
+            <div class="state_container">
+                <a href="#" class="state active"></a>
+                <a href="src/prozess_1.html" class="state"></a>
+                <a href="src/prozess_2.html" class="state"></a>
+                <a href="src/prozess_3.html" class="state"></a>
+                <a href="src/prozess_4.html" class="state"></a>
+                <a href="src/prozess_5.html" class="state"></a>
+                <a href="src/prozess_6.html" class="state"></a>
+                <a href="src/prozess_7.html" class="state"></a>
+            </div>
+            <div class="audio_container hide" id="audio_container">
                 <div class="audio hide" id="audio_0">
-                    <div id="audio_0_container"></div>
+                    <div class="animate_audio audio_0"></div>
                 </div>
                 <div class="audio hide" id="audio_1">
-                    <div id="audio_1_container"></div>
+                    <div class="animate_audio audio_1"></div>
                 </div>
             </div>
-            <div class="mov_container">
-                <div class="mov hide" id="mov_0"></div>
-                <div class="mov hide" id="mov_1"></div>
+            <div class="mov_container border" id="mov_container">
+                <div class="mov hide" id="mov_0">
+                    <video-js id="video_0">
+                        <source src="media/mov/1.1.mp4" type="video/mp4">
+                    </video-js>
+                </div>
+                <div class="mov hide" id="mov_1">
+                    <video-js id="video_1">
+                        <source src="media/mov/1.1_abstrakt.mp4" type="video/mp4">
+                    </video-js>
+                </div>
             </div>
             <div class="text_container">
                 <div class="text hide" id="text_0">
@@ -110,14 +127,30 @@
                 </div>
                 <div class="text hide" id="text_1">
                     <p class="margin_0">
-                        LOREM</br>LOREM</br>LOREM
+                        Pflegen, pflegen, pflegen! 
+                        Feierabend, Feierabend, Feierabend! 
+                        Spazieren, spazieren, spazieren! 
+                        Beamte, Beamte, Beamte! 
+                        Bier trinken, Bier trinken, Bier trinken! 
+                        Ältere Herren, ältere Herren, ältere Herren! 
+                        Ausnahmen, Ausnahmen, Ausnahmen! 
+                        Bankdirektor, Bankdirektor, Bankdirektor! 
+                        Schätzen, schätzen, schätzen! 
+                        Einladen, einladen, einladen! 
+                        Autofahrt, fahren, fahren, fahren! 
+                        Abendessen, essen, essen! 
+                        Einmal die Woche, Woche, Woche! 
+                        Mädchen, Mädchen, Mädchen! 
+                        Weinstube, Weinstube, Weinstube! 
+                        Bett, Bett, Bett!
                     </p>
                 </div>
             </div>
         </main>
     </div>
     </div>
-    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="script/howler.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
     <script src="script/process.js"></script>
 </body>
 </html>

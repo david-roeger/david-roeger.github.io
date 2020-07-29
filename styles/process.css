@@ -24,6 +24,10 @@ h1 {
 .margin_0 {
   margin: 0; }
 
+.border {
+  border: 2px solid black;
+  height: 156px !important; }
+
 .container {
   width: 100%;
   margin-top: 20px;
@@ -36,13 +40,16 @@ h1 {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
   width: 100%; }
 
 header > * {
   margin-left: 10px;
   margin-right: 10px; }
+
+h1 {
+  margin-left: 220px; }
 
 .controls {
   width: 180px;
@@ -119,7 +126,7 @@ input:checked + .toggle {
   right: 0;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: transparent;
   border: 2px solid black;
   transition: all 0.1s ease; }
@@ -131,7 +138,7 @@ input:checked + .toggle {
     transform: scale(0);
     width: 26px;
     height: 26px;
-    border-radius: 12px;
+    border-radius: 13px;
     background-color: #00ff00;
     border: 4px solid white;
     transition: all 0.1s ease; }
@@ -143,6 +150,7 @@ input:checked + .select {
     transform: scale(1); }
 
 .media {
+  position: relative;
   flex: 1 0 auto;
   max-width: 800px;
   margin-left: 40px;
@@ -153,48 +161,123 @@ input:checked + .select {
 
 .state_container {
   height: 36px;
-  background-color: lightgray; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .state_container :last-child {
+    margin-right: 0px; }
+
+.state {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 20px;
+  position: relative; }
+  .state.active {
+    border-color: #00ff00; }
+    .state.active:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      background-color: #00ff00;
+      border: 4px solid white; }
 
 .audio_container,
 .mov_container,
 .text_container {
-  border: 2px solid black;
   display: flex; }
 
 canvas {
   width: 100%;
   height: 100%; }
 
-.audio_container {
-  height: 72px; }
-
 .audio,
 .mov,
 .text {
-  outline: 2px solid black;
-  flex: 1 0 0; }
+  flex: 1 0 0;
+  max-width: 100%; }
 
 .mov_container {
-  min-height: 36px; }
+  z-index: -1;
+  height: 454px;
+  overflow: hidden;
+  margin-bottom: 0px; }
+
+.mov_container.small {
+  height: 229px;
+  border: none; }
 
 .mov {
-  height: 450px; }
+  height: 100%;
+  width: 100%; }
 
 .mov.small {
-  height: 225px; }
+  width: 50%; }
+
+video {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important; }
 
 .text_container {
-  min-height: 36px;
-  background-color: white; }
+  min-height: 36px; }
 
 .text {
-  background-color: white;
   font-size: 1.6rem;
-  font-weight: 300;
-  padding: 20px;
+  padding: 10px 40px 0 0;
+  font-weight: 400;
   min-height: 36px; }
   .text#text_1 {
-    font-size: 6rem;
-    font-weight: 400; }
+    backdrop-filter: none;
+    background-color: transparent; }
   .text p {
     text-align: left; }
+
+.audio_container {
+  border: none;
+  margin: 0;
+  width: 100%; }
+
+.audio {
+  height: 36px;
+  overflow: visible; }
+
+.animate_audio {
+  height: 72px;
+  width: 72px;
+  max-width: 72px;
+  border-radius: 36px;
+  margin: 0 auto; }
+
+.audio_0 {
+  background: -webkit-linear-gradient(315deg, #f99e1f 0%, rgba(249, 158, 31, 0) 70%), -webkit-linear-gradient(65deg, #00ff00 10%, rgba(13, 242, 89, 0) 80%), -webkit-linear-gradient(135deg, #0643f9 15%, rgba(6, 67, 249, 0) 80%), -webkit-linear-gradient(205deg, #ff1a66 100%, rgba(255, 26, 102, 0) 70%);
+  background: linear-gradient(135deg, #f99e1f 0%, rgba(249, 158, 31, 0) 70%), linear-gradient(25deg, #00ff00 10%, rgba(13, 242, 89, 0) 80%), linear-gradient(315deg, #0643f9 15%, rgba(6, 67, 249, 0) 80%), linear-gradient(245deg, #ff1a66 100%, rgba(255, 26, 102, 0) 70%);
+  animation: gradient 2S ease infinite;
+  background-size: 300% 300%; }
+
+.audio_1 {
+  background: -webkit-linear-gradient(315deg, #00ff00 0%, rgba(174, 240, 6, 0) 70%), -webkit-linear-gradient(65deg, #db0843 10%, rgba(219, 8, 67, 0) 80%), -webkit-linear-gradient(135deg, #03f4df 15%, rgba(3, 244, 223, 0) 80%), -webkit-linear-gradient(205deg, #00ff00 100%, rgba(43, 244, 10, 0) 70%);
+  background: linear-gradient(135deg, #00ff00 0%, rgba(174, 240, 6, 0) 70%), linear-gradient(25deg, #db0843 10%, rgba(219, 8, 67, 0) 80%), linear-gradient(315deg, #03f4df 15%, rgba(3, 244, 223, 0) 80%), linear-gradient(245deg, #00ff00 100%, rgba(43, 244, 10, 0) 70%);
+  animation: gradient_1 2S ease infinite;
+  background-size: 300% 300%; }
+
+@keyframes gradient {
+  0% {
+    background-position: 50% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 50% 50%; } }
+
+@keyframes gradient_1 {
+  0% {
+    background-position: 100% 50%; }
+  50% {
+    background-position: 0% 100%; }
+  100% {
+    background-position: 100% 50%; } }
