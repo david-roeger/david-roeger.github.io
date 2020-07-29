@@ -22,7 +22,7 @@ window.onload = function() {
     autoPlay: false
   });
   audio_file_1 = new Howl({
-    src: ['./media/audio/1.2.mp3'],
+    src: ['./media/audio/1.1_Abstrakt.mp3'],
     loop: true,
     autoPlay: false
   });
@@ -141,7 +141,7 @@ movTopLevel.addEventListener("change", function () {
     mov_0.classList.remove("small");
     mov_1.classList.remove("small");
     mov_container.classList.remove("small");
-    mv_containers.classList.add("border");
+    mov_container.classList.add("border");
 
     mov.secondlevel_0 = false;
     mov.secondlevel_1 = false;
@@ -175,6 +175,8 @@ movSecondLevel_0.addEventListener("change", function () {
 
   if (mov.secondlevel_0 || mov.secondlevel_1) {
     mov_container.classList.remove("border");
+  } else {
+    mov_container.classList.add("border");
   }
 });
 
@@ -205,6 +207,8 @@ movSecondLevel_1.addEventListener("change", function () {
   }
   if (mov.secondlevel_0 || mov.secondlevel_1) {
     mov_container.classList.remove("border");
+  } else {
+    mov_container.classList.add("border");
   }
 });
 

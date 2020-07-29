@@ -34,6 +34,7 @@ h1 {
 
 .border {
   border: 2px solid black;
+  height: 156px !important;
 }
 
 .container {
@@ -50,7 +51,7 @@ h1 {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
   width: 100%;
 }
@@ -58,6 +59,10 @@ header {
 header > * {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+h1 {
+  margin-left: 220px;
 }
 
 .controls {
@@ -147,7 +152,7 @@ input:checked + .toggle {
   right: 0;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: transparent;
   border: 2px solid black;
   &:after {
@@ -158,7 +163,7 @@ input:checked + .toggle {
     transform: scale(0);
     width: 26px;
     height: 26px;
-    border-radius: 12px;
+    border-radius: 13px;
     background-color: #00ff00;
     border: 4px solid white;
     transition: all 0.1s ease;
@@ -188,7 +193,34 @@ input:checked + .select {
 
 .state_container {
   height: 36px;
-  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :last-child {
+    margin-right: 0px;
+  }
+}
+.state {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 20px;
+  position: relative;
+  &.active {
+    border-color: #00ff00;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      background-color: #00ff00;
+      border: 4px solid white;
+    }
+  }
 }
 
 .audio_container,
@@ -215,10 +247,8 @@ canvas {
 .mov_container {
   z-index: -1;
   height: 454px;
-  position: absolute;
-  width: 100%;
-  top: 56px;
   overflow: hidden;
+  margin-bottom: 0px;
 }
 
 .mov_container.small {
@@ -246,27 +276,28 @@ video {
 }
 
 .text {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  padding: 10px 40px 0 0;
   font-weight: 400;
   &#text_1 {
+
     backdrop-filter: none;
     background-color: transparent;
-    font-size: 2rem;
   }
-  padding: 20px;
   min-height: 36px;
   p {
     text-align: left;
   }
 }
 
-.text_container,
 .audio_container {
   border: none;
   margin: 0;
+  width: 100%;
 }
 .audio {
-  margin: 20px 0;
+  height: 36px;
+  overflow: visible;
 }
 .animate_audio {
   height: 72px;
@@ -277,49 +308,58 @@ video {
 }
 
 .audio_0 {
-  background: linear-gradient(-120deg, #ee7752, #e73c7e, #23a6d5, #00ff00);
-  animation: gradient_0 2S ease infinite;
-  background-size: 400% 400%;
+  background:
+    -webkit-linear-gradient(315deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
+    -webkit-linear-gradient(65deg, #00ff00 10%, hsla(140, 90%, 50%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
+    linear-gradient(25deg, #00ff00 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, #0643f9 15%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(245deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
+  
+
+  animation: gradient 2S ease infinite;
+  background-size: 300% 300%;
 }
 
 .audio_1 {
-  background: linear-gradient(-212deg, #00ff00, #e73c7e,#23a6d5, #ee7752);
+    background:
+      -webkit-linear-gradient(315deg, #00ff00 0%, hsla(77.02, 95.04%, 48.3%, 0) 70%),
+      -webkit-linear-gradient(65deg, hsla(343.4, 92.7%, 44.51%, 1) 10%, hsla(343.4, 92.7%, 44.51%, 0) 80%),
+      -webkit-linear-gradient(135deg, hsla(174.82, 97.89%, 48.28%, 1) 15%, hsla(174.82, 97.89%, 48.28%, 0) 80%),
+      -webkit-linear-gradient(205deg,#00ff00 100%, hsla(111.53, 91.77%, 49.87%, 0) 70%);
+    background:
+      linear-gradient(135deg, #00ff00 0%, hsla(77.02, 95.04%, 48.3%, 0) 70%),
+      linear-gradient(25deg, hsla(343.4, 92.7%, 44.51%, 1) 10%, hsla(343.4, 92.7%, 44.51%, 0) 80%),
+      linear-gradient(315deg, hsla(174.82, 97.89%, 48.28%, 1) 15%, hsla(174.82, 97.89%, 48.28%, 0) 80%),
+      linear-gradient(245deg, #00ff00 100%, hsla(111.53, 91.77%, 49.87%, 0) 70%);
+    
   animation: gradient_1 2S ease infinite;
-  background-size: 400% 400%;
+  background-size: 300% 300%;
 }
 
-@keyframes gradient_0 {
-    0% {
-        background-position: 0% 20%;
-    }
-    25% {
-        background-position: 82% 12%;
-    }
-    50% {
-        background-position: 70% 80%;
-    }
-    75% {
-        background-position: 40% 12%;
-    }
-    100% {
-        background-position: 0% 20%;
-    }
+@keyframes gradient {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
 }
 
 @keyframes gradient_1 {
   0% {
-      background-position: 10% 90%;
-  }
-  25% {
-      background-position: 40% 4%;
+    background-position: 100% 50%;
   }
   50% {
-      background-position: 90% 4%;
-  }
-  75% {
-      background-position: 50% 60%;
+    background-position: 0% 100%;
   }
   100% {
-      background-position: 10% 90%;
+    background-position: 100% 50%;
   }
 }
