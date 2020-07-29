@@ -90,17 +90,25 @@
         </div>
         <main class="media">
             <div class="state_container"></div>
-            <div class="audio_container">
+            <div class="audio_container hide" id="audio_container">
                 <div class="audio hide" id="audio_0">
-                    <div id="audio_0_container"></div>
+                    <div class="animate_audio audio_0"></div>
                 </div>
                 <div class="audio hide" id="audio_1">
-                    <div id="audio_1_container"></div>
+                    <div class="animate_audio audio_1"></div>
                 </div>
             </div>
-            <div class="mov_container">
-                <div class="mov hide" id="mov_0"></div>
-                <div class="mov hide" id="mov_1"></div>
+            <div class="mov_container border" id="mov_container">
+                <div class="mov hide" id="mov_0">
+                    <video-js id="video_0">
+                        <source src="media/mov/1.mp4" type="video/mp4">
+                    </video-js>
+                </div>
+                <div class="mov hide" id="mov_1">
+                    <video-js id="video_1">
+                        <source src="media/mov/1.mp4" type="video/mp4">
+                    </video-js>
+                </div>
             </div>
             <div class="text_container">
                 <div class="text hide" id="text_0">
@@ -110,14 +118,31 @@
                 </div>
                 <div class="text hide" id="text_1">
                     <p class="margin_0">
-                        LOREM</br>LOREM</br>LOREM
+                        Pflegen, pflegen, pflegen</br>
+                        Feierabend, Feierabend, Feierabend</br>
+                        Spazieren, spazieren, spazieren</br>
+                        Beamte, Beamte, Beamte</br>
+                        Bier trinken, Bier trinken, Bier trinken</br>
+                        Ältere Herren, ältere Herren, ältere Herren</br>
+                        Ausnahmen, Ausnahmen, Ausnahmen</br>
+                        Bankdirektor, Bankdirektor, Bankdirektor</br>
+                        Schätzen, schätzen, schätzen</br>
+                        Einladen, einladen, einladen </br>
+                        Autofahrt, fahren, fahren, fahren</br>
+                        Abendessen, essen, essen</br>
+                        Einmal die Woche, Woche, Woche</br>
+                        Mädchen, Mädchen, Mädchen</br>
+                        Weinstube, Weinstube, Weinstube</br>
+                        Bett, Bett, Bett
+                        
                     </p>
                 </div>
             </div>
         </main>
     </div>
     </div>
-    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="script/howler.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
     <script src="script/process.js"></script>
 </body>
 </html>

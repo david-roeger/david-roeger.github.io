@@ -2,6 +2,7 @@
 let audioTopLevel = document.getElementById("audioTopLevelInput");
 let audioSecondLevel_0 = document.getElementById("audio_secondlevel_0_input");
 let audioSecondLevel_1 = document.getElementById("audio_secondlevel_1_input");
+//let audio_container =  document.getElementById("audio_container");
 
 let audio = {
   toplevel: false,
@@ -9,58 +10,33 @@ let audio = {
   secondlevel_1: false,
 };
 
-/*
-let audio_file_0 = new Howl({
-  src: ['/media/audio/1.1.mp3'],
-  loop: true
-});
-*/
+let audio_file_0;
+let audio_file_1;
 
-let audio_file_0 = WaveSurfer.create({
-  container: '#audio_0_container',
-  waveColor: '#00ff00',
-  progressColor: '#00ff00',
-  fillParent: true,
-  responsive: true,
-  height: 72,
-  normalize: true,
-  autoCenter: true,
-  hideScrollbar: true,
-  interact: false,
-  cursorWidth: 0
-})
+window.onload = function() {
+  var context = new AudioContext();
+  // Setup all nodes
+  audio_file_0 = new Howl({
+    src: ['./media/audio/1.1.mp3'],
+    loop: true,
+    autoPlay: false
+  });
+  audio_file_1 = new Howl({
+    src: ['./media/audio/1.2.mp3'],
+    loop: true,
+    autoPlay: false
+  });
+}
 
-audio_file_0.load('/media/audio/1.1.mp3');
-audio_file_0.on('finish', function() {
-  audioSecondLevel_0.play();
-})
-
-
-let audio_file_1 = WaveSurfer.create({
-  container: '#audio_1_container',
-  waveColor: '#00ff00',
-  progressColor: '#00ff00',
-  fillParent: true,
-  responsive: true,
-  height: 72,
-  normalize: true,
-  autoCenter: true,
-  hideScrollbar: true,
-  interact: false,
-  cursorWidth: 0,
-  zoom: 10
-})
-
-audio_file_1.load('/media/audio/1.2.mp3');
-audio_file_1.on('finish', function() {
-  audioSecondLevel_1.play();
-})
-
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioCtx = new AudioContext();
 
 audioTopLevel.addEventListener("change", function () {
   audioTopLevel = document.getElementById("audioTopLevelInput");
   audioSecondLevel_0 = document.getElementById("audio_secondlevel_0_input");
   audioSecondLevel_1 = document.getElementById("audio_secondlevel_1_input");
+  audio_container =  document.getElementById("audio_container");
+
   const value = event.target.checked ? true : false;
   audio.toplevel = value;
   let secondlevel_0 = document.getElementById("audio_secondlevel_0");
@@ -68,6 +44,7 @@ audioTopLevel.addEventListener("change", function () {
 
   secondlevel_0.classList.toggle("hide");
   secondlevel_1.classList.toggle("hide");
+  audio_container.classList.toggle("hide");
 
   if (!value) {
     audioSecondLevel_0.checked = false;
@@ -111,6 +88,7 @@ audioSecondLevel_1.addEventListener("change", function () {
 let movTopLevel = document.getElementById("movTopLevelInput");
 let movSecondLevel_0 = document.getElementById("mov_secondlevel_0_input");
 let movSecondLevel_1 = document.getElementById("mov_secondlevel_1_input");
+let mov_container =  document.getElementById("mov_container");
 
 let mov = {
   toplevel: false,
@@ -118,10 +96,31 @@ let mov = {
   secondlevel_1: false,
 };
 
+videojs.options.autoplay = false;
+
+var mov_file_0 = videojs('video_0', {
+  preload: 'auto',
+  controls: false,
+  muted: true,
+  loop: true,
+  fill: true
+});
+
+var mov_file_1 = videojs('video_1', {
+  preload: 'auto',
+  controls: false,
+  muted: true,
+  loop: true,
+  fill: true
+});
+
+
 movTopLevel.addEventListener("change", function () {
   movTopLevel = document.getElementById("movTopLevelInput");
   movSecondLevel_0 = document.getElementById("mov_secondlevel_0_input");
   movSecondLevel_1 = document.getElementById("mov_secondlevel_1_input");
+  mov_container =  document.getElementById("mov_container");
+
 
   const value = event.target.checked ? true : false;
   mov.toplevel = value;
@@ -141,6 +140,9 @@ movTopLevel.addEventListener("change", function () {
     mov_1.classList.add("hide");
     mov_0.classList.remove("small");
     mov_1.classList.remove("small");
+    mov_container.classList.remove("small");
+    mv_containers.classList.add("border");
+
     mov.secondlevel_0 = false;
     mov.secondlevel_1 = false;
   }
@@ -150,17 +152,29 @@ movSecondLevel_0.addEventListener("change", function () {
   movSecondLevel_0 = document.getElementById("mov_secondlevel_0_input");
   let mov_0 = document.getElementById("mov_0");
   let mov_1 = document.getElementById("mov_1");
+  mov_container =  document.getElementById("mov_container");
 
   mov.secondlevel_0 = event.target.checked ? true : false;
   mov_0.classList.toggle("hide");
+  if(mov.secondlevel_0) {
+    mov_file_0.play();
+  } else {
+    mov_file_0.pause();
+  }
 
   console.log(movSecondLevel_0.checked, mov.secondlevel_0);
   if (mov.secondlevel_0 && mov.secondlevel_1) {
     mov_0.classList.add("small");
     mov_1.classList.add("small");
+    mov_container.classList.add("small");
   } else {
     mov_0.classList.remove("small");
     mov_1.classList.remove("small");
+    mov_container.classList.remove("small");
+  }
+
+  if (mov.secondlevel_0 || mov.secondlevel_1) {
+    mov_container.classList.remove("border");
   }
 });
 
@@ -168,19 +182,29 @@ movSecondLevel_1.addEventListener("change", function () {
   movSecondLevel_1 = document.getElementById("mov_secondlevel_0_input");
   let mov_1 = document.getElementById("mov_1");
   let mov_0 = document.getElementById("mov_0");
+  mov_container =  document.getElementById("mov_container");
   console.log()
 
   mov.secondlevel_1 = event.target.checked ? true : false;
   mov_1.classList.toggle("hide");
 
-  console.log(mov);
+  if(mov.secondlevel_1) {
+    mov_file_1.play();
+  } else {
+    mov_file_1.pause();
+  }
 
   if (mov.secondlevel_0 && mov.secondlevel_1) {
     mov_0.classList.add("small");
     mov_1.classList.add("small");
+    mov_container.classList.add("small");
   } else {
     mov_0.classList.remove("small");
     mov_1.classList.remove("small");
+    mov_container.classList.remove("small");
+  }
+  if (mov.secondlevel_0 || mov.secondlevel_1) {
+    mov_container.classList.remove("border");
   }
 });
 
