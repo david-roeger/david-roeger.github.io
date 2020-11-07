@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\App.svelte",
+    "..\\Canvas.svelte",
+    "..\\Nav.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport Nav from \"./components/Nav.svelte\";\n\timport Canvas from \"./components/Canvas.svelte\";\n\timport shape from \"./sketches/shape.js\";\n\timport shape2 from \"./sketches/shape2.js\";\n\n\timport { sketches } from \"./store.js\";\n\tlet obj = [\n\t\t{\n\t\t\tname: \"shape\",\n\t\t\tsketch: shape,\n\t\t},\n\t\t{\n\t\t\tname: \"shape2\",\n\t\t\tsketch: shape2,\n\t\t},\n\t];\n\t$sketches = [...obj];\n</script>\n\n<style>\n\t.container {\n\t\theight: 100%;\n\t\tdisplay: grid;\n\t\tbackground-color: black;\n\t\tgrid-template: 0 100% / 200px 1fr;\n\t}\n\n\t.inner-container {\n\t\tgrid-area: 1 / 2 / 2 / 3;\n\t\tbackground-color: black;\n\t\theight: 100%;\n\t}\n\n\tnav {\n\t\tgrid-area: 1 / 1 / 2 / 2;\n\t\tbackground-color: blue;\n\t\theight: 100%;\n\t}\n</style>\n\n<div class=\"container\">\n\t<main class=\"inner-container\">\n\t\t<Canvas />\n\t</main>\n\t<nav>\n\t\t<Nav />\n\t</nav>\n</div>\n",
+    "<script>\n\timport { onMount, onDestroy } from \"svelte\";\n\timport p5 from \"../p5.min\";\n\timport { currentSketch, sketches } from \"../store.js\";\n\n\tlet p = undefined;\n\tlet mounted = false;\n\tfunction setCanvas() {\n\t\tif (mounted) {\n\t\t\tconst container = document.getElementById(\"container\");\n\t\t\tif (p !== undefined) {\n\t\t\t\tp.remove();\n\t\t\t}\n\t\t\tp = new p5($sketches[$currentSketch].sketch);\n\t\t}\n\t}\n\n\tconst unsubscribe = currentSketch.subscribe(() => {\n\t\tsetCanvas();\n\t});\n\n\tonMount(async () => {\n\t\tmounted = true;\n\t\tsetCanvas();\n\t});\n\n\tonDestroy(unsubscribe);\n</script>\n\n<style>\n\t#container {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t}\n</style>\n\n<div id=\"container\" />\n",
+    "<script>\n\timport { currentSketch, sketches } from \"../store.js\";\n\tfunction updateSketch(i) {\n\t\tconsole.log(i);\n\t\t$currentSketch = i;\n\t}\n\tconsole.log($currentSketch);\n</script>\n\n<style>\n\tul {\n\t}\n\tli {\n\t\tcolor: white;\n\t\tuser-select: none;\n\t}\n\tli:hover {\n\t\tcursor: pointer;\n\t}\n</style>\n\n<ul>\n\t{#each $sketches as { name }, i}\n\t\t<li on:click={() => updateSketch(i)}>{name}</li>\n\t{/each}\n</ul>\n"
+  ],
+  "names": [],
+  "mappings": "AAqBC,UAAU,eAAC,CAAC,AACX,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,IAAI,CACb,gBAAgB,CAAE,KAAK,CACvB,aAAa,CAAE,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,KAAK,CAAC,GAAG,AAClC,CAAC,AAED,gBAAgB,eAAC,CAAC,AACjB,SAAS,CAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CACxB,gBAAgB,CAAE,KAAK,CACvB,MAAM,CAAE,IAAI,AACb,CAAC,AAED,GAAG,eAAC,CAAC,AACJ,SAAS,CAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CACxB,gBAAgB,CAAE,IAAI,CACtB,MAAM,CAAE,IAAI,AACb,CAAC;ACRD,UAAU,aAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,AACxB,CAAC;ACvBD,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,KAAK,CACZ,WAAW,CAAE,IAAI,AAClB,CAAC,AACD,gBAAE,MAAM,AAAC,CAAC,AACT,MAAM,CAAE,OAAO,AAChB,CAAC"
+}
