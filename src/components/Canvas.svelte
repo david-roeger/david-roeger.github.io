@@ -16,14 +16,11 @@
 	}
 
 	const unsubscribe = currentSketch.subscribe(() => {
-		console.log("value changed");
 		setCanvas();
 	});
 
 	onMount(async () => {
 		mounted = true;
-		console.log("mounted");
-
 		setCanvas();
 	});
 
