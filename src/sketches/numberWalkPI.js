@@ -23,7 +23,7 @@ export default function sketch(p5) {
         p5.noFill();
         p5.angleMode(p5.DEGREES);
         radius = (p5.height -200)/2;
-        p5.loadStrings('pi.txt', piLoaded);
+        p5.loadStrings('public/assets/pi.txt', piLoaded);
         p5.background(0);
         p5.frameRate(20);
         p5.smooth();
