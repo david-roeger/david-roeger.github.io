@@ -7,6 +7,7 @@
 	import Hilbert from './sketches/hilbertCurve.js';
 	import NwPI from './sketches/numberWalkPI.js';
 	import Rsquares from './sketches/rotatingSquares.js';
+	import Turtle from './sketches/turtle.js';
 
 	import { sketches } from './store.js';
 	let obj = [
@@ -34,6 +35,10 @@
 		{
 			name: 'Rotating Squares',
 			sketch: Rsquares,
+		},
+		{
+			name: 'Turtle',
+			sketch: Turtle,
 		},
 	];
 	$sketches = [...obj];
