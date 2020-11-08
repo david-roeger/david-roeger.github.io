@@ -1,7 +1,7 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
-	import p5 from '../p5';
-	import { currentSketch, sketches } from '../store.js';
+	import { onMount, onDestroy } from "svelte";
+	import p5 from "../p5";
+	import { currentSketch, sketches } from "../store.js";
 
 	let p = undefined;
 	let mounted = false;
@@ -10,7 +10,7 @@
 			if (p !== undefined) {
 				p.remove();
 			}
-			p = new p5($sketches[$currentSketch]?.sketch);
+			if ($currentSketch) p = new p5($sketches[$currentSketch].sketch);
 		}
 	}
 
