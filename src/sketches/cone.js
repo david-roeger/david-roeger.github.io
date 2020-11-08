@@ -6,16 +6,10 @@ export default function sketch(p5) {
     let width = window.innerWidth - 200;
     let height = window.innerHeight;
 
-    if(width < height) {
-        height = width;
-    } else {
-        width = height
-    }
-
     p5.setup = function() {
         let canvas = p5.createCanvas(width,height, p5.WEBGL);
         canvas.parent("container");
-        p5.background(255);  
+        p5.background(0);  
         p5.noFill();
         updateCanvas();
         initCones();
@@ -34,7 +28,7 @@ export default function sketch(p5) {
             maxSteps = width / 10;
         }
         
-        p5.background(255); 
+        p5.background(0); 
         for (let x = 0; x < rows; x++) {
             for (let y = 0; y < cols; y++) {
                 const posX = baseWidth * x;
