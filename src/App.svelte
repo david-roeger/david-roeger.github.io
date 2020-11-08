@@ -91,11 +91,14 @@
 		}
 		.inner-container {
 			padding-top: 40px;
+			padding-bottom: 40px;
+
 			position: absolute;
 			top: 0;
 			left: 0;
 			transform: translateX(-300px);
 			transition: 0.3s linear;
+			height: calc(100% - 80px);
 		}
 
 		.inner-container.active {
