@@ -10,7 +10,7 @@
 			if (p !== undefined) {
 				p.remove();
 			}
-			p = new p5($sketches[$currentSketch].sketch);
+			p = new p5($sketches[$currentSketch]?.sketch);
 		}
 	}
 

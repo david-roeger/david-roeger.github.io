@@ -4,9 +4,13 @@
 	import Shape from './sketches/shape.js';
 	import ColorCube from './sketches/colorCube.js';
 	import Cone from './sketches/cone.js';
+	import Hilbert from './sketches/hilbertCurve.js';
+	import NwPI from './sketches/numberWalkPI.js';
+	import Rsquares from './sketches/rotatingSquares.js';
 
 	import { sketches } from './store.js';
 	let obj = [
+		{},
 		{
 			name: 'Shape',
 			sketch: Shape,
@@ -18,6 +22,18 @@
 		{
 			name: 'Cones',
 			sketch: Cone,
+		},
+		{
+			name: 'Hilbert Curve',
+			sketch: Hilbert,
+		},
+		{
+			name: 'Number Walk PI',
+			sketch: NwPI,
+		},
+		{
+			name: 'Rotating Squares',
+			sketch: Rsquares,
 		},
 	];
 	$sketches = [...obj];

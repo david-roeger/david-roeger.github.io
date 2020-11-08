@@ -1,7 +1,7 @@
 <script>
-	import { currentSketch, sketches } from "../store.js";
+	import { currentSketch, sketches } from '../store.js';
 	function updateSketch(i) {
-		console.log(i);
+		$currentSketch = 0;
 		$currentSketch = i;
 	}
 	console.log($currentSketch);
@@ -21,6 +21,8 @@
 
 <ul>
 	{#each $sketches as { name }, i}
-		<li on:click={() => updateSketch(i)}>{name}</li>
+		{#if name}
+			<li on:click={() => updateSketch(i)}>{name}</li>
+		{/if}
 	{/each}
 </ul>
