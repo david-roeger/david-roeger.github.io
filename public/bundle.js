@@ -94070,8 +94070,6 @@ var app = (function () {
             const mouseY = p5.mouseY;
             const width = p5.width;
             const height = p5.height;
-            console.log(mouseX,mouseY);
-            if(mouseX === 0 && mouseY === 0) mouseX = width;
 
             if(mouseX < width) {
                 maxSteps = p5.max(mouseX, width) / 10;
@@ -94134,7 +94132,7 @@ var app = (function () {
                             xOff = -1;
                             break;
                 }
-                for (let i = 0; i < steps; i++) {
+                for (let i = 0; i < maxSteps - steps; i++) {
                     p5.noStroke();
                     let color = p5.map(i * 1.5, 0, maxSteps, 255, 0);
                     p5.fill(p5.constrain(color, 0, 255));
