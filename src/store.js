@@ -1,4 +1,13 @@
 import { writable } from 'svelte/store';
 
-export const currentSketch = writable(1);
+let current;
+
+const storedSketch = sessionStorage.getItem("current");
+if(isNaN(parseInt(storedSketch))) {
+    current = 1;
+} else {
+    current = parseInt(storedSketch);
+}
+console.log(current)
+export const currentSketch = writable(current);
 export const sketches = writable([]);
