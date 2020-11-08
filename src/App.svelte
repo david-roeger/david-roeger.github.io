@@ -1,5 +1,6 @@
 <script>
 	import Nav from "./components/Nav.svelte";
+	import Info from "./components/Info.svelte";
 	import Canvas from "./components/Canvas.svelte";
 	import Shape from "./sketches/shape.js";
 	import ColorCube from "./sketches/colorCube.js";
@@ -9,11 +10,15 @@
 	import Rsquares from "./sketches/rotatingSquares.js";
 	import Turtle from "./sketches/turtle.js";
 
-	import { sketches } from "./store.js";
+	import { currentSketch, sketches } from "./store.js";
 	let obj = [
 		{},
 		{
-			name: "Shape",
+			name: "Turtle",
+			sketch: Turtle,
+		},
+		{
+			name: "Turtle???",
 			sketch: Shape,
 		},
 		{
@@ -36,10 +41,6 @@
 			name: "Rotating Squares",
 			sketch: Rsquares,
 		},
-		{
-			name: "Turtle",
-			sketch: Turtle,
-		},
 	];
 	$sketches = [...obj];
 </script>
@@ -47,21 +48,35 @@
 <style>
 	.container {
 		height: 100%;
-		display: grid;
+		display: flex;
+		flex-direction: row-reverse;
 		background-color: black;
-		grid-template: 0 100% / 200px 1fr;
+		overflow: hidden;
 	}
 
 	.inner-container {
-		grid-area: 1 / 2 / 2 / 3;
+		width: 299px;
+		min-width: 299px;
+		max-width: 299px;
 		background-color: black;
+		height: 100%;
+		border-right: 1px solid white;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow-y: auto;
+	}
+
+	main {
+		flex-grow: 1;
+	}
+	nav {
 		height: 100%;
 	}
 
-	nav {
-		grid-area: 1 / 1 / 2 / 2;
-		background-color: blue;
-		height: 100%;
+	section {
+		padding: 1rem 0.4rem 1rem 1.2rem;
 	}
 </style>
 
@@ -70,10 +85,15 @@
 </svelte:head>
 
 <div class="container">
-	<main class="inner-container">
+	<main>
 		<Canvas />
 	</main>
-	<nav>
-		<Nav />
-	</nav>
+	<div class="inner-container">
+		<nav>
+			<Nav />
+		</nav>
+		<section>
+			<Info />
+		</section>
+	</div>
 </div>
