@@ -1,18 +1,23 @@
 <script>
-	import Nav from "./components/Nav.svelte";
-	import Canvas from "./components/Canvas.svelte";
-	import shape from "./sketches/shape.js";
-	import shape2 from "./sketches/shape2.js";
+	import Nav from './components/Nav.svelte';
+	import Canvas from './components/Canvas.svelte';
+	import Shape from './sketches/shape.js';
+	import ColorCube from './sketches/colorCube.js';
+	import Cone from './sketches/cone.js';
 
-	import { sketches } from "./store.js";
+	import { sketches } from './store.js';
 	let obj = [
 		{
-			name: "shape",
-			sketch: shape,
+			name: 'Shape',
+			sketch: Shape,
 		},
 		{
-			name: "shape2",
-			sketch: shape2,
+			name: 'Color Cube',
+			sketch: ColorCube,
+		},
+		{
+			name: 'Cones',
+			sketch: Cone,
 		},
 	];
 	$sketches = [...obj];
