@@ -1,43 +1,43 @@
 <script>
-	import Nav from './components/Nav.svelte';
-	import Canvas from './components/Canvas.svelte';
-	import Shape from './sketches/shape.js';
-	import ColorCube from './sketches/colorCube.js';
-	import Cone from './sketches/cone.js';
-	import Hilbert from './sketches/hilbertCurve.js';
-	import NwPI from './sketches/numberWalkPI.js';
-	import Rsquares from './sketches/rotatingSquares.js';
-	import Turtle from './sketches/turtle.js';
+	import Nav from "./components/Nav.svelte";
+	import Canvas from "./components/Canvas.svelte";
+	import Shape from "./sketches/shape.js";
+	import ColorCube from "./sketches/colorCube.js";
+	import Cone from "./sketches/cone.js";
+	import Hilbert from "./sketches/hilbertCurve.js";
+	import NwPI from "./sketches/numberWalkPI.js";
+	import Rsquares from "./sketches/rotatingSquares.js";
+	import Turtle from "./sketches/turtle.js";
 
-	import { sketches } from './store.js';
+	import { sketches } from "./store.js";
 	let obj = [
 		{},
 		{
-			name: 'Shape',
+			name: "Shape",
 			sketch: Shape,
 		},
 		{
-			name: 'Color Cube',
+			name: "Color Cube",
 			sketch: ColorCube,
 		},
 		{
-			name: 'Cones',
+			name: "Cones",
 			sketch: Cone,
 		},
 		{
-			name: 'Hilbert Curve',
+			name: "Hilbert Curve",
 			sketch: Hilbert,
 		},
 		{
-			name: 'Number Walk PI',
+			name: "Number Walk PI",
 			sketch: NwPI,
 		},
 		{
-			name: 'Rotating Squares',
+			name: "Rotating Squares",
 			sketch: Rsquares,
 		},
 		{
-			name: 'Turtle',
+			name: "Turtle",
 			sketch: Turtle,
 		},
 	];
@@ -64,6 +64,10 @@
 		height: 100%;
 	}
 </style>
+
+<svelte:head>
+	<title>Processing &lt;3</title>
+</svelte:head>
 
 <div class="container">
 	<main class="inner-container">
