@@ -1,5 +1,5 @@
 export default function sketch(p5) {
-  let width = window.innerWidth - 200;
+  let width = window.innerWidth - 300;
   let height = window.innerHeight;
 
   if(width < height) {
@@ -23,7 +23,7 @@ export default function sketch(p5) {
 
   p5.draw = function() {
     p5.orbitControl(5,5,5);
-    p5.rotateX(1);
+    p5.rotateY(1);
     p5.rotateY(1);
     p5.background(0);
     p5.noStroke();

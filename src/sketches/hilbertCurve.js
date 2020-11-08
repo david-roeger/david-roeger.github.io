@@ -6,7 +6,7 @@ export default function sketch(p5) {
     var reload = true;
     let path = []
 
-    let width = window.innerWidth - 200;
+    let width = window.innerWidth - 300;
     let height = window.innerHeight;
 
     if(width < height) {

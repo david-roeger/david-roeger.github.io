@@ -3,7 +3,7 @@ export default function sketch(p5) {
     let rows, cols, baseWidth;
     let cones = [];
 
-    let width = window.innerWidth - 200;
+    let width = window.innerWidth - 300;
     let height = window.innerHeight;
 
     p5.setup = function() {
@@ -17,11 +17,13 @@ export default function sketch(p5) {
 
     p5.draw = function() {
         let maxSteps;
-        const mouseX = p5.mouseX;
+        let mouseX = p5.mouseX;
         const mouseY = p5.mouseY;
         const width = p5.width;
         const height = p5.height;
-        p5.translate(-width/2, -height/2);
+        console.log(mouseX,mouseY)
+        if(mouseX === 0 && mouseY === 0) mouseX = width
+
         if(mouseX < width) {
             maxSteps = p5.max(mouseX, width) / 10;
         } else {

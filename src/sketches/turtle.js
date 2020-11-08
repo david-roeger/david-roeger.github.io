@@ -19,7 +19,7 @@ export default function sketch(p5) {
             this.xpos = this.location.x;
             this.ypos = this.location.y;
             this.angle = 0;
-            this.mass = 200.0;
+            this.mass = 50.0;
             this.topspeed = topspeed_;
         }
     
@@ -117,7 +117,7 @@ export default function sketch(p5) {
 
     let turtle = [];
     let angle = 0;
-    let w = window.innerWidth - 200;
+    let w = window.innerWidth - 300;
     let h = window.innerHeight;
 
     p5.setup = function() {

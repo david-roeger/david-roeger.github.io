@@ -1,5 +1,5 @@
 export default function sketch(p5) {
-    let width = window.innerWidth - 200;
+    let width = window.innerWidth - 300;
     let height = window.innerHeight;
 
     if(width < height) {
@@ -22,7 +22,7 @@ export default function sketch(p5) {
 
         p5.noFill();
         p5.angleMode(p5.DEGREES);
-        radius = (p5.width -40)/2;
+        radius = (p5.height -200)/2;
         p5.loadStrings('../assets/pi.txt', piLoaded);
         p5.background(0);
         p5.frameRate(20);
