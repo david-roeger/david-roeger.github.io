@@ -14,6 +14,7 @@
 		margin-bottom: 0;
 		margin-top: 2em;
 		color: white;
+		user-select: none;
 	}
 	li {
 		color: white;

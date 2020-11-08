@@ -478,7 +478,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (38:2) {#if name}
+    // (39:2) {#if name}
     function create_if_block(ctx) {
     	let li;
     	let span;
@@ -503,14 +503,14 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = text(" ");
     			t3 = space();
-    			attr_dev(span, "class", "svelte-t8bcr3");
-    			add_location(span, file, 41, 4, 722);
+    			attr_dev(span, "class", "svelte-n6rrgi");
+    			add_location(span, file, 42, 4, 744);
 
     			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*i*/ ctx[6] === /*$currentSketch*/ ctx[0]
     			? "active"
-    			: "") + " svelte-t8bcr3"));
+    			: "") + " svelte-n6rrgi"));
 
-    			add_location(li, file, 38, 3, 624);
+    			add_location(li, file, 39, 3, 646);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -531,7 +531,7 @@ var app = (function () {
 
     			if (dirty & /*$currentSketch*/ 1 && li_class_value !== (li_class_value = "" + (null_to_empty(/*i*/ ctx[6] === /*$currentSketch*/ ctx[0]
     			? "active"
-    			: "") + " svelte-t8bcr3"))) {
+    			: "") + " svelte-n6rrgi"))) {
     				attr_dev(li, "class", li_class_value);
     			}
     		},
@@ -546,14 +546,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(38:2) {#if name}",
+    		source: "(39:2) {#if name}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:1) {#each $sketches as { name }
+    // (38:1) {#each $sketches as { name }
     function create_each_block(ctx) {
     	let if_block_anchor;
     	let if_block = /*name*/ ctx[4] && create_if_block(ctx);
@@ -591,7 +591,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(37:1) {#each $sketches as { name }",
+    		source: "(38:1) {#each $sketches as { name }",
     		ctx
     	});
 
@@ -621,9 +621,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h3, "class", "svelte-t8bcr3");
-    			add_location(h3, file, 34, 0, 546);
-    			add_location(ul, file, 35, 0, 566);
+    			attr_dev(h3, "class", "svelte-n6rrgi");
+    			add_location(h3, file, 35, 0, 568);
+    			add_location(ul, file, 36, 0, 588);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
