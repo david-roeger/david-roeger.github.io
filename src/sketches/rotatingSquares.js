@@ -17,7 +17,7 @@ export default function sketch(p5) {
     p5.setup = function() {
         let canvas = p5.createCanvas(width, height);
         canvas.parent("container");
-        edge = width / 3 * 2;
+        edge = width / 3 * 1.8;
         p5.smooth();
         p5.background(0);
         p5.rectMode(p5.CENTER);
@@ -26,7 +26,7 @@ export default function sketch(p5) {
     }
 
     p5.draw = function() {
-        vel = p5.map(p5.mouseX, 0, width, 0, 2);
+        vel = p5.map(p5.mouseX, 0, width, 0, p5.PI);
         // background(0);
         p5.translate(p5.width / 2, p5.height / 2);
         p5.fill(0, 0, 0, 15);
