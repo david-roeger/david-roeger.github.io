@@ -1,13 +1,15 @@
+import {uWidth, uHeight} from "./sketch_utils.js"
+
 export default function sketch(p5) {
+    let width = uWidth;
+    let height = uHeight;
+
     let order = 5;
     let N = Math.pow(2, order);
     let total = N * N;
 
     var reload = true;
     let path = []
-
-    let width = window.innerWidth - 300;
-    let height = window.innerHeight;
 
     if(width < height) {
         height = width;

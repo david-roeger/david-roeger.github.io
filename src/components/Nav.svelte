@@ -1,9 +1,10 @@
 <script>
-	import { currentSketch, sketches } from "../store.js";
+	import { currentSketch, sketches, navActive } from "../store.js";
 	function updateSketch(i) {
 		$currentSketch = 0;
 		$currentSketch = i;
 		sessionStorage.setItem("current", i);
+		$navActive = false;
 	}
 	console.log($currentSketch);
 </script>
