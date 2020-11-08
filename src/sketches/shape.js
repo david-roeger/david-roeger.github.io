@@ -1,6 +1,8 @@
+import {uWidth, uHeight} from "./sketch_utils.js"
+
 export default function sketch(p5) {
-    let width = window.innerWidth - 300;
-    let height = window.innerHeight;
+    let width = uWidth;
+    let height = uHeight;
 
     let shape;
     p5.setup = function() {

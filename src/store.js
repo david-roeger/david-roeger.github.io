@@ -11,3 +11,4 @@ if(isNaN(parseInt(storedSketch))) {
 console.log(current)
 export const currentSketch = writable(current);
 export const sketches = writable([]);
+export const navActive = writable(true);

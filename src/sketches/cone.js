@@ -1,10 +1,12 @@
+import {uWidth, uHeight} from "./sketch_utils.js"
+
 export default function sketch(p5) {
+    let width = uWidth;
+    let height = uHeight;
+
     let scl = 10;
     let rows, cols, baseWidth;
     let cones = [];
-
-    let width = window.innerWidth - 300;
-    let height = window.innerHeight;
 
     p5.setup = function() {
         let canvas = p5.createCanvas(width,height);

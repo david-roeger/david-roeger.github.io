@@ -1,7 +1,11 @@
+import {uWidth, uHeight} from "./sketch_utils.js"
+
 export default function sketch(p5) {
+    let w = uWidth;
+    let h = uHeight;
 
     const PI = p5.PI;
-    const HALF_PI = p5.HALF_PI
+    const HALF_PI = p5.HALF_PI;
     let width;
     let height;
 
@@ -117,9 +121,7 @@ export default function sketch(p5) {
 
     let turtle = [];
     let angle = 0;
-    let w = window.innerWidth - 300;
-    let h = window.innerHeight;
-
+    
     p5.setup = function() {
         let canvas = p5.createCanvas(w,h);
         canvas.parent("container");
