@@ -1,6 +1,6 @@
 <script>
 	import { onMount, onDestroy } from "svelte";
-	import p5 from "../p5.min.js";
+	import p5 from "../p5.js";
 	import { currentSketch, sketches } from "../store.js";
 
 	let p = undefined;
