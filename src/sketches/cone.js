@@ -52,7 +52,7 @@ export default function sketch(p5) {
         for (let i = 0; i < rows; i++) {
             for (let j = 0; j < cols; j++) {
                 var direction = Math.random();
-                direction = direction < 0.25 ? 0 : (direction < .5 ? 1 : ( direction < .75 ? 2 : 3));
+                direction = direction < 0.26 ? 0 : (direction < .5 ? 1 : ( direction < .75 ? 2 : 3));
                 const cone = new Cone(direction);
                 cones.push(cone);
             }
