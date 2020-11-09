@@ -468,7 +468,6 @@ var app = (function () {
     } else {
         current = parseInt(storedSketch);
     }
-    console.log(current);
     const currentSketch = writable(current);
     const sketches = writable([]);
     const navActive = writable(true);
@@ -94193,7 +94192,6 @@ var app = (function () {
         p5.draw = function() {
             p5.translate(-p5.width/2, -p5.height/2);
             if(reload){
-                console.log(order);
                 p5.background(0);
                 update();
                 counter = 1;
@@ -94321,6 +94319,7 @@ var app = (function () {
                 p5.color('#EBD2AA'),
                 p5.color('#7EB629')
             ];
+
         };
 
         let i = 1;
@@ -94328,20 +94327,20 @@ var app = (function () {
         p5.draw = function() {
             if(clear){
                 p5.background(0);
-                clear = false;
-                i = 1;
                 p5.fill(255);
-
+                p5.noStroke();
                 for(let i = 0; i<10; i++){
                     p5.textSize(fs);
                     p5.textFont('Arial');
                     let angle = 360 / 10 * i - 90;
                     let xPos = p5.cos(angle) * fr;
                     let yPos = p5.sin(angle) * fr;
-                    console.log(xPos, i, fr, angle);
                     p5.text(i, p5.width/2 + xPos, p5.height/2 + yPos);
                 }
                 p5.noFill();
+                clear = false;
+                i = 1;
+
             }
             p5.translate(width/2, height/2);
             if(isPi && isPiLoaded){
@@ -94349,7 +94348,7 @@ var app = (function () {
                 isPi = false;
             }
             if(i < numberArray.length){
-                p5.fill(255,0,0,10);
+                p5.fill(0,0,0,10);
                 p5.noStroke();
                 p5.ellipse(0, 0,width - 200, height - 200);
                 p5.noFill();

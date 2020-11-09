@@ -44,6 +44,7 @@ export default function sketch(p5) {
             p5.color('#EBD2AA'),
             p5.color('#7EB629')
         ]
+
     }
 
     let i = 1;
@@ -51,10 +52,8 @@ export default function sketch(p5) {
     p5.draw = function() {
         if(clear){
             p5.background(0);
-            clear = false;
-            i = 1;
             p5.fill(255);
-
+            p5.noStroke();
             for(let i = 0; i<10; i++){
                 p5.textSize(fs);
                 p5.textFont('Arial');
@@ -64,6 +63,9 @@ export default function sketch(p5) {
                 p5.text(i, p5.width/2 + xPos, p5.height/2 + yPos);
             }
             p5.noFill();
+            clear = false;
+            i = 1;
+
         }
         p5.translate(width/2, height/2);
         if(isPi && isPiLoaded){
