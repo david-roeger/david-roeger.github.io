@@ -61,7 +61,6 @@ export default function sketch(p5) {
                 let angle = 360 / 10 * i - 90;
                 let xPos = p5.cos(angle) * fr;
                 let yPos = p5.sin(angle) * fr;
-                console.log(xPos, i, fr, angle)
                 p5.text(i, p5.width/2 + xPos, p5.height/2 + yPos);
             }
             p5.noFill();
@@ -72,7 +71,7 @@ export default function sketch(p5) {
             isPi = false;
         }
         if(i < numberArray.length){
-            p5.fill(255,0,0,10);
+            p5.fill(0,0,0,10);
             p5.noStroke();
             p5.ellipse(0, 0,width - 200, height - 200);
             p5.noFill();

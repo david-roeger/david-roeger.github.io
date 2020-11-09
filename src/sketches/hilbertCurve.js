@@ -29,7 +29,6 @@ export default function sketch(p5) {
     p5.draw = function() {
         p5.translate(-p5.width/2, -p5.height/2);
         if(reload){
-            console.log(order);
             p5.background(0);
             update();
             counter = 1;
