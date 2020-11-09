@@ -12,11 +12,13 @@ export default function sketch(p5) {
         
     let numberArray = [];
     let piArray = [];
-    let clear = false
+    let clear = true
     let isPi = true;
     let isPiLoaded = false;
     let radius;
     let colorArray;
+    let fr = (width / 2) - (window.innerWidth < 800 ? 80 : 60);
+    let fs = window.innerWidth < 800 ? 12 : 20;
 
     p5.setup = function() {
         let canvas = p5.createCanvas(width, height);
@@ -29,7 +31,7 @@ export default function sketch(p5) {
         p5.background(0);
         p5.frameRate(20);
         p5.smooth();
-
+        p5.textAlign(p5.CENTER, p5.CENTER);
         colorArray = [
             p5.color('#D45067'),
             p5.color('#BAB9B5'),
@@ -51,6 +53,18 @@ export default function sketch(p5) {
             p5.background(0);
             clear = false;
             i = 1;
+            p5.fill(255);
+
+            for(let i = 0; i<10; i++){
+                p5.textSize(fs);
+                p5.textFont('Arial');
+                let angle = 360 / 10 * i - 90;
+                let xPos = p5.cos(angle) * fr;
+                let yPos = p5.sin(angle) * fr;
+                console.log(xPos, i, fr, angle)
+                p5.text(i, p5.width/2 + xPos, p5.height/2 + yPos);
+            }
+            p5.noFill();
         }
         p5.translate(width/2, height/2);
         if(isPi && isPiLoaded){
@@ -58,9 +72,9 @@ export default function sketch(p5) {
             isPi = false;
         }
         if(i < numberArray.length){
-            p5.fill(0,0,0,10);
+            p5.fill(255,0,0,10);
             p5.noStroke();
-            p5.rect(-width / 2, -height / 2,width, height);
+            p5.ellipse(0, 0,width - 200, height - 200);
             p5.noFill();
             if(numberArray[i] != numberArray[i-1]){
                 var startOffset = angleOffset(numberArray[i-1]);
