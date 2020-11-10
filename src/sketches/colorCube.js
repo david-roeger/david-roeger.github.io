@@ -12,14 +12,12 @@ export default function sketch(p5) {
     let resolution = 5;
 
     p5.setup = function() {
+      p5.smooth();
       let canvas = p5.createCanvas(width,height, p5.WEBGL);
       canvas.parent("container");
       p5.background(0);
       p5.colorMode(p5.RGB, edge);
       p5.noStroke();
-      
-
-      p5.smooth();
     }
 
     p5.draw = function() {
@@ -30,6 +28,7 @@ export default function sketch(p5) {
       p5.noStroke();
       black();
       white();
+
     }
 
     function white() {
