@@ -18,7 +18,7 @@ export default function sketch(p5) {
     }
 
     p5.setup = function() {
-        let canvas = p5.createCanvas(width,height, p5.WEBGL);
+        let canvas = p5.createCanvas(width,height);
         canvas.parent("container");
         p5.background(0);  
         p5.noFill();
