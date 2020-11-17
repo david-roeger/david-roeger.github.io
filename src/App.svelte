@@ -102,6 +102,7 @@
 	}
 	nav {
 		height: 100%;
+		margin-bottom: 1em;
 	}
 
 	section {
