@@ -102,11 +102,10 @@
 	}
 	nav {
 		height: 100%;
-		margin-bottom: 1em;
 	}
 
 	section {
-		padding: 1rem 0.4rem 1rem 1.2rem;
+		padding: 1rem 0.5rem 1rem 1.2rem;
 	}
 
 	.arrow {
@@ -132,6 +131,10 @@
 
 		.inner-container.active {
 			transform: translateX(0);
+		}
+
+		nav {
+			margin-bottom: 2em;
 		}
 
 		.arrow {

@@ -6,7 +6,7 @@
 
 <style>
 	h3 {
-		margin-right: 3em;
+		margin-right: 1.2em;
 		margin-bottom: 1em;
 		padding-top: 1em;
 		border-top: 1px solid white;
