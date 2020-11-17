@@ -16,30 +16,58 @@
 		{
 			name: "Turtle",
 			sketch: Turtle,
+			info: [
+				"Abbildung eines physischen Systems. Die Schildkröte folgt der Maus und bewegt sich dabei entsprechend realer Naturgesetze (Antrieb, Geschwindigkeit, Gravitation, …) mit zur Veranschaulichung modifizierten Werten.",
+			],
 		},
 		{
-			name: "Turtle???",
+			name: "Slinky",
 			sketch: Shape,
+			info: [
+				"Ähnlich wie Schildkröte folgt auch hier die Form, mit der Anmutung eines Treppenläufers, den Bewegungen Maus. Dabei entfernt sie sich immer weiter von einem perfekten Kreis, bis sie weit ausladend über den Bildschirm fegt. Dies hat keinen physischen Hintergrund, sondern stellt lediglich einen ästhetischen Moment dar.",
+				"Mit einem Doppelklick kann der Hintergrund gelöscht werden.",
+			],
 		},
 		{
 			name: "Color Cube",
 			sketch: ColorCube,
+			info: [
+				"Processing ist mehr als nur X und Y. Auch dreidimensionale Räume lassen sich erkunden, sodass sich eine gigantische Welt an Möglichkeiten öffnet.",
+				"Mit gedrückter Maus kann der Würfel rotiert werden.",
+				"Leider ist die 3D Arbeit sehr Performance-lastig, sodass es passieren kann, dass die Framrate rapide sinkt :(",
+			],
 		},
 		{
 			name: "Cones",
 			sketch: Cone,
+			info: [
+				"Bewege die Maus von links nach rechts und von oben nach unten um einen Ästehtischen Moment zu erschaffen.",
+			],
 		},
 		{
 			name: "Hilbert Curve",
 			sketch: Hilbert,
+			info: [
+				"Visualisierung des mathematischen Konstruktes einer raumfüllenden Kurve.",
+				"Doppelklick um auf die nächste Stufe zu gelangen.",
+				"Mehr Infos zu dem Thema gibt es <a href='https://en.wikipedia.org/wiki/Hilbert_curve'>hier</a>.",
+			],
 		},
 		{
 			name: "Number Walk PI",
 			sketch: NwPI,
+			info: [
+				"Visuelle Darstellung der ersten 10.000 Nachkommastellen der Zahl PI.",
+				"Doppelklick um neu zu starten.",
+			],
 		},
 		{
 			name: "Rotating Squares",
 			sketch: Rsquares,
+			info: [
+				"Bewege die Maus von links nach rechts um die Geschwindigkeit zu steuern.",
+				"Doppelklick um mehr Rechtecke hinzuzufügen.",
+			],
 		},
 	];
 	$sketches = [...obj];

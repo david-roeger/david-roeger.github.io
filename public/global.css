@@ -6,4 +6,12 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
 	overflow-y: hidden;
+	color: white;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+	color: white;
 }
