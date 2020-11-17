@@ -126,7 +126,7 @@
 			left: 0;
 			transform: translateX(-300px);
 			transition: 0.3s linear;
-			height: calc(100% - 80px);
+			min-height: calc(100% - 80px);
 		}
 
 		.inner-container.active {

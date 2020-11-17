@@ -774,7 +774,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (55:2) {#if name}
+    // (56:2) {#if name}
     function create_if_block_1(ctx) {
     	let li;
     	let span;
@@ -800,13 +800,13 @@ var app = (function () {
     			t2 = text(" ");
     			t3 = space();
     			attr_dev(span, "class", "svelte-17hbnce");
-    			add_location(span, file, 58, 4, 978);
+    			add_location(span, file, 59, 4, 1005);
 
     			attr_dev(li, "class", li_class_value = "" + (null_to_empty(/*i*/ ctx[9] === /*$currentSketch*/ ctx[1]
     			? "active"
     			: "") + " svelte-17hbnce"));
 
-    			add_location(li, file, 55, 3, 880);
+    			add_location(li, file, 56, 3, 907);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -842,14 +842,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(55:2) {#if name}",
+    		source: "(56:2) {#if name}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:1) {#each $sketches as { name }
+    // (55:1) {#each $sketches as { name }
     function create_each_block(ctx) {
     	let if_block_anchor;
     	let if_block = /*name*/ ctx[7] && create_if_block_1(ctx);
@@ -887,14 +887,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(54:1) {#each $sketches as { name }",
+    		source: "(55:1) {#each $sketches as { name }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:0) {#if showRessources}
+    // (66:0) {#if showRessources}
     function create_if_block(ctx) {
     	let ol;
     	let li0;
@@ -966,31 +966,31 @@ var app = (function () {
     			span3 = element("span");
     			span3.textContent = "Processing Library fürs Web. (Damit wurden auch die Beispiele\r\n\t\t\t\toben umgesetzt)";
     			attr_dev(a0, "href", "https://processing.org/");
-    			add_location(a0, file, 67, 3, 1201);
-    			add_location(br0, file, 68, 3, 1259);
-    			add_location(span0, file, 69, 3, 1270);
+    			add_location(a0, file, 68, 3, 1228);
+    			add_location(br0, file, 69, 3, 1286);
+    			add_location(span0, file, 70, 3, 1297);
     			attr_dev(li0, "class", "svelte-17hbnce");
-    			add_location(li0, file, 66, 2, 1192);
+    			add_location(li0, file, 67, 2, 1219);
     			attr_dev(a1, "href", "https://www.youtube.com/user/shiffman");
-    			add_location(a1, file, 73, 3, 1383);
-    			add_location(br1, file, 74, 3, 1460);
-    			add_location(span1, file, 75, 3, 1471);
+    			add_location(a1, file, 74, 3, 1410);
+    			add_location(br1, file, 75, 3, 1487);
+    			add_location(span1, file, 76, 3, 1498);
     			attr_dev(li1, "class", "svelte-17hbnce");
-    			add_location(li1, file, 72, 2, 1374);
+    			add_location(li1, file, 73, 2, 1401);
     			attr_dev(a2, "href", "https://www.generative-gestaltung.de/");
-    			add_location(a2, file, 79, 3, 1604);
-    			add_location(br2, file, 82, 3, 1692);
-    			add_location(span2, file, 83, 3, 1703);
+    			add_location(a2, file, 80, 3, 1631);
+    			add_location(br2, file, 83, 3, 1719);
+    			add_location(span2, file, 84, 3, 1730);
     			attr_dev(li2, "class", "svelte-17hbnce");
-    			add_location(li2, file, 78, 2, 1595);
+    			add_location(li2, file, 79, 2, 1622);
     			attr_dev(a3, "href", "https://p5js.org/");
-    			add_location(a3, file, 87, 3, 1829);
-    			add_location(br3, file, 88, 3, 1872);
-    			add_location(span3, file, 89, 3, 1883);
+    			add_location(a3, file, 88, 3, 1856);
+    			add_location(br3, file, 89, 3, 1899);
+    			add_location(span3, file, 90, 3, 1910);
     			attr_dev(li3, "class", "svelte-17hbnce");
-    			add_location(li3, file, 86, 2, 1820);
+    			add_location(li3, file, 87, 2, 1847);
     			attr_dev(ol, "class", "ressources-list svelte-17hbnce");
-    			add_location(ol, file, 65, 1, 1143);
+    			add_location(ol, file, 66, 1, 1170);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ol, anchor);
@@ -1048,7 +1048,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(65:0) {#if showRessources}",
+    		source: "(66:0) {#if showRessources}",
     		ctx
     	});
 
@@ -1094,10 +1094,10 @@ var app = (function () {
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			attr_dev(h3, "class", "svelte-17hbnce");
-    			add_location(h3, file, 51, 0, 802);
-    			add_location(ul, file, 52, 0, 822);
+    			add_location(h3, file, 52, 0, 829);
+    			add_location(ul, file, 53, 0, 849);
     			attr_dev(h4, "class", "svelte-17hbnce");
-    			add_location(h4, file, 63, 0, 1047);
+    			add_location(h4, file, 64, 0, 1074);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1222,6 +1222,7 @@ var app = (function () {
     		set_store_value(currentSketch, $currentSketch = i, $currentSketch);
     		sessionStorage.setItem("current", i);
     		set_store_value(navActive, $navActive = false, $navActive);
+    		$$invalidate(0, showRessources = false);
     	}
 
     	let showRessources = false;
@@ -95257,22 +95258,22 @@ var app = (function () {
     			polygon0 = svg_element("polygon");
     			polygon1 = svg_element("polygon");
     			document.title = "Processing <3";
-    			attr_dev(main, "class", "svelte-9u62vj");
-    			add_location(main, file$3, 165, 1, 4196);
-    			attr_dev(nav1, "class", "svelte-9u62vj");
-    			add_location(nav1, file$3, 169, 2, 4329);
-    			attr_dev(section, "class", "svelte-9u62vj");
-    			add_location(section, file$3, 172, 2, 4360);
-    			attr_dev(div0, "class", div0_class_value = "inner-container " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-9u62vj");
-    			add_location(div0, file$3, 168, 1, 4267);
+    			attr_dev(main, "class", "svelte-1vlscyo");
+    			add_location(main, file$3, 165, 1, 4200);
+    			attr_dev(nav1, "class", "svelte-1vlscyo");
+    			add_location(nav1, file$3, 169, 2, 4333);
+    			attr_dev(section, "class", "svelte-1vlscyo");
+    			add_location(section, file$3, 172, 2, 4364);
+    			attr_dev(div0, "class", div0_class_value = "inner-container " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-1vlscyo");
+    			add_location(div0, file$3, 168, 1, 4271);
     			set_style(polygon0, "fill", "white");
     			attr_dev(polygon0, "class", "st0");
     			attr_dev(polygon0, "points", "12,7 0,7 0,5 12,5 12,5.1 ");
-    			add_location(polygon0, file$3, 190, 3, 4794);
+    			add_location(polygon0, file$3, 190, 3, 4798);
     			set_style(polygon1, "fill", "white");
     			attr_dev(polygon1, "class", "st0");
     			attr_dev(polygon1, "points", "12,0 12,2.6 15.4,6 12,9.4 12,12 18,6 ");
-    			add_location(polygon1, file$3, 194, 3, 4892);
+    			add_location(polygon1, file$3, 194, 3, 4896);
     			attr_dev(svg, "version", "1.1");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "xmlns:xlink", "http://www.w3.org/1999/xlink");
@@ -95284,12 +95285,12 @@ var app = (function () {
     			set_style(svg, "overflow", "visible");
     			set_style(svg, "enable-background", "new 0 0 26 12");
     			attr_dev(svg, "xml:space", "preserve");
-    			attr_dev(svg, "class", "svelte-9u62vj");
-    			add_location(svg, file$3, 179, 2, 4510);
-    			attr_dev(div1, "class", div1_class_value = "arrow " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-9u62vj");
-    			add_location(div1, file$3, 176, 1, 4408);
-    			attr_dev(div2, "class", "container svelte-9u62vj");
-    			add_location(div2, file$3, 164, 0, 4170);
+    			attr_dev(svg, "class", "svelte-1vlscyo");
+    			add_location(svg, file$3, 179, 2, 4514);
+    			attr_dev(div1, "class", div1_class_value = "arrow " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-1vlscyo");
+    			add_location(div1, file$3, 176, 1, 4412);
+    			attr_dev(div2, "class", "container svelte-1vlscyo");
+    			add_location(div2, file$3, 164, 0, 4174);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -95323,11 +95324,11 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*$navActive*/ 1 && div0_class_value !== (div0_class_value = "inner-container " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-9u62vj")) {
+    			if (!current || dirty & /*$navActive*/ 1 && div0_class_value !== (div0_class_value = "inner-container " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-1vlscyo")) {
     				attr_dev(div0, "class", div0_class_value);
     			}
 
-    			if (!current || dirty & /*$navActive*/ 1 && div1_class_value !== (div1_class_value = "arrow " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-9u62vj")) {
+    			if (!current || dirty & /*$navActive*/ 1 && div1_class_value !== (div1_class_value = "arrow " + (/*$navActive*/ ctx[0] ? "active" : "") + " svelte-1vlscyo")) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
