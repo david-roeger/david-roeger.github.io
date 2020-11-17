@@ -977,18 +977,18 @@ var app = (function () {
     			add_location(span1, file, 76, 3, 1498);
     			attr_dev(li1, "class", "svelte-17hbnce");
     			add_location(li1, file, 73, 2, 1401);
-    			attr_dev(a2, "href", "https://www.generative-gestaltung.de/");
+    			attr_dev(a2, "href", "http://www.generative-gestaltung.de/2/");
     			add_location(a2, file, 80, 3, 1631);
-    			add_location(br2, file, 83, 3, 1719);
-    			add_location(span2, file, 84, 3, 1730);
+    			add_location(br2, file, 83, 3, 1720);
+    			add_location(span2, file, 84, 3, 1731);
     			attr_dev(li2, "class", "svelte-17hbnce");
     			add_location(li2, file, 79, 2, 1622);
     			attr_dev(a3, "href", "https://p5js.org/");
-    			add_location(a3, file, 88, 3, 1856);
-    			add_location(br3, file, 89, 3, 1899);
-    			add_location(span3, file, 90, 3, 1910);
+    			add_location(a3, file, 88, 3, 1857);
+    			add_location(br3, file, 89, 3, 1900);
+    			add_location(span3, file, 90, 3, 1911);
     			attr_dev(li3, "class", "svelte-17hbnce");
-    			add_location(li3, file, 87, 2, 1847);
+    			add_location(li3, file, 87, 2, 1848);
     			attr_dev(ol, "class", "ressources-list svelte-17hbnce");
     			add_location(ol, file, 66, 1, 1170);
     		},
