@@ -78,7 +78,7 @@
 				geeignet für komplette Neulinge.</span>
 		</li>
 		<li>
-			<a href="https://www.generative-gestaltung.de/">Generative
+			<a href="http://www.generative-gestaltung.de/2/">Generative
 				Gestaltung
 			</a>
 			<br />
