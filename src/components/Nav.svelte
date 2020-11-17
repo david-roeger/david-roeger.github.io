@@ -7,6 +7,7 @@
 		$currentSketch = i;
 		sessionStorage.setItem("current", i);
 		$navActive = false;
+		showRessources = false;
 	}
 
 	let showRessources = false;
