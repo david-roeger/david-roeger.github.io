@@ -27,7 +27,6 @@ export default function sketch(p5) {
 
     let counter = 1;
     p5.draw = function() {
-        p5.translate(-p5.width/2, -p5.height/2);
         if(reload){
             p5.background(0);
             update();

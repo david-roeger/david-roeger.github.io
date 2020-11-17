@@ -16,23 +16,16 @@
 		color: white;
 		margin-top: 0;
 	}
-	p + p {
+	p:last-child {
 		margin-bottom: 0;
 	}
 </style>
 
 {#if $sketches[$currentSketch].hasOwnProperty('name')}
 	<h3>{$sketches[$currentSketch].name}</h3>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolores
-		ab dicta repellendus laborum ratione architecto tempora cumque, quaerat
-		sint, soluta beatae debitis! Harum quo doloremque commodi itaque
-		eveniet. Sit?
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolores
-		ab dicta repellendus laborum ratione architecto tempora cumque, quaerat
-		sint, soluta beatae debitis! Harum quo doloremque commodi itaque
-		eveniet. Sit?
-	</p>
+	{#each $sketches[$currentSketch].info as info}
+		<p>
+			{@html info}
+		</p>
+	{/each}
 {/if}
