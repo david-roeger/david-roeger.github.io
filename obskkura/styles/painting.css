@@ -1,0 +1,68 @@
+body {
+	--bg-color: rgb(12, 12, 12);
+	background-color: var(--bg-color);
+	transition: background-color 0.2s ease;
+	color: white;
+	--heading-wdth: 630;
+	--heading-wdth-vmin: 63vmin;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	display: grid;
+	place-items: center;
+}
+
+.image-container {
+	opacity: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(50px);
+	opacity: 0.2;
+}
+
+h1 {
+	color: transparent;
+	font-weight: normal;
+	font-size: 100vmin;
+	height: 100vmin;
+	text-align: center;
+	font-weight: normal;
+	grid-area: 1 / 1;
+	color: inherit;
+	text-align: center;
+	display: inline;
+	transition: font-variation-settings 0.4s ease;
+	user-select: none;
+
+	text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+h1.lh {
+	line-height: 100vmin;
+}
+
+.image {
+	border-radius: 8vmin;
+	width: calc(var(--heading-wdth-vmin) - 16vmin);
+	height: calc(64vmin - 16vmin);
+	margin-top: 16vmin;
+	background-color: var(--bg-color);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: background-color 0.1s ease;
+}
+
+.input-container {
+	position: absolute;
+	bottom: var(--padding);
+	left: var(--padding);
+	grid-template-columns: fit-content(30px) 1fr;
+}

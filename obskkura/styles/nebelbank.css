@@ -1,0 +1,48 @@
+body {
+	background-color: rgb(12, 12, 12);
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+canvas {
+	position: absolute;
+}
+
+.center,
+.center2 {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template: 1fr / 1fr;
+	place-items: center;
+}
+
+h1 {
+	color: transparent;
+	font-weight: normal;
+	font-size: 10vw;
+	text-align: center;
+	font-weight: normal;
+	grid-area: 1 / 1;
+
+	color: white;
+	grid-area: 1 / 1;
+	text-align: center;
+
+	user-select: none;
+}
+
+.center h1 {
+	mix-blend-mode: difference;
+	color: var(--text-color);
+}
+
+h1 span {
+	font-variation-settings: 'wdth' var(--text-wdth);
+}

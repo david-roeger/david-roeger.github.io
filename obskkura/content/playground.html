@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBSKKURA Playground</title>
+
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" sizes="any">
+    <link rel="mask-icon" href="../assets/logo.svg" color="#000000">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/playground.css">
+
+    <script src="../scripts/playground.js" defer></script>
+</head>
+<body>
+    <h1><div contenteditable="true">Obskkura Playground</div></h1>
+    <p class="chars">
+        A<span> </span>B<span> </span>C<span> </span>D<span> </span>E<span> </span>F<span> </span>G<span> </span>H<span> </span>I<span> </span>J<span> </span>K<span> </span>L</br>M<span> </span>N<span> </span>O<span> </span>P<span> </span>Q<span> </span>R<span> </span>S<span> </span>T<span> </span>U<span> </span>V<span> </span>W</br>X<span> </span>Y<span> </span>Z<span> </span>Ä<span> </span>Ö<span> </span>Ü<span> </span>.<span> </span>:<span> </span>,<span> </span>;<span> </span>!<span> </span>-
+    </p>
+    <div class="input-container-flex">
+        <input type="range" id="headingWidth" name="width" min="400" max="720" value="720">
+        <label for="headingWidth">Width: 720</label>
+    </div>
+
+    <div class="input-container full start fontSize">
+        <label for="fontSize">Fontsize:</label>
+        <input type="text" id="fontSize" value="24">
+    </div>
+
+    <div class="input-container full start">
+        <div class="switch">
+            <input type="checkbox" id="whiteSpace">
+            <span class="slider round"></span>    
+        </div>
+        <label for="whiteSpace">Hide Whitespace</label>
+    </div>
+
+    <div class="input-container full start">
+        <div class="switch">
+            <input type="checkbox" id="ligatures">
+            <span class="slider round"></span>    
+        </div>
+        <label for="ligatures">Use Ligatures</br>(<span>ET FT LA TJ VT TT YT</span>)</label>
+    </div>
+
+    <div class="input-container full start">
+        <div class="switch">
+            <input type="checkbox" id="randomize" checked>
+            <span class="slider round"></span>    
+        </div>
+        <label for="randomize">Randomize</label>
+    </div>
+
+    <p class="text" contenteditable="true">
+        Q Q Q Q Q Q Q Q Q ...
+    </p>
+
+    <div class="empty border-top"></div>
+
+    <div class="input-container full start">
+        <div class="switch">
+            <input type="checkbox" id="hideKern">
+            <span class="slider round"></span>    
+        </div>
+        <label for="hideKern">Show Kerning</label>
+    </div>
+
+    <div class="kernContainer">
+        <div id="kern" class="hide"></div>
+        <div class="empty"></div>
+    </div>
+
+    <a href="nav.html" class="bts abs">
+        🡠
+    </a>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+	width: 100vw;
+	height: 100%;
+	min-height: 100%;
+	display: grid;
+	place-items: center;
+
+	background-color: rgb(12, 12, 12);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	--before-bg: rgb(12, 12, 12);
+	--before-opacity: 1;
+}
+
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: background-color, opacity, 0.2s ease;
+	background-color: var(--before-bg);
+	opacity: var(--before-opacity);
+}
+
+@media only screen and (orientation: landscape) {
+	body {
+		background-image: var(--landscape-bg);
+	}
+}
+
+@media only screen and (orientation: portrait) {
+	body {
+		background-image: var(--portrait-bg);
+	}
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+h1 {
+	width: calc(100vmin - var(--padding) * 2);
+	max-width: 600px;
+	height: calc(100vmin - var(--padding) * 2);
+	max-height: 600px;
+	position: relative;
+	overflow: auto;
+
+	display: grid;
+	place-items: center;
+
+	border-radius: 50%;
+}
+
+h1 span {
+	height: 50%;
+	padding-bottom: 3.5rem;
+	transform-origin: center bottom;
+
+	position: absolute;
+	top: 0;
+	left: calc(50% - 2.5rem);
+	color: white;
+}
+
+h1 span b {
+	font-size: 3rem;
+	line-height: 6rem;
+	width: 5rem;
+	height: 100%;
+
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 span b a {
+	font-variation-settings: 'wdth' 400;
+	transition: font-variation-settings 0.4s ease;
+}
+h1 span.active b a {
+	font-variation-settings: 'wdth' 720;
+}
+
+.center {
+	position: relative;
+	font-weight: normal;
+	font-size: 1.25rem;
+	text-align: center;
+
+	width: 8rem;
+	height: 8rem;
+
+	display: grid;
+	place-items: center;
+
+	border-radius: 50%;
+	border: 4px solid white;
+}
+
+a p b {
+	user-select: none;
+	font-weight: normal;
+	color: white;
+}
