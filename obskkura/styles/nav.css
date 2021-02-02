@@ -22,72 +22,50 @@ body {
 
 .image-container > div {
 	position: relative;
-	width: 100vmin;
-	height: 100vmin;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 }
 
 img {
 	position: absolute;
 	pointer-events: none;
-	transition: opacity 0.2s ease;
+	transition: opacity 0.4s ease;
+}
+
+img.one {
+	width: 100vmin;
+	height: 100vmin;
+	bottom: 0;
 }
 
 @media only screen and (orientation: landscape) {
-	img {
+	img.two {
+		top: calc(60vmin - 60vmax);
+		left: -10vmax;
+		height: 120vmax;
+		width: 120vmax;
+	}
+
+	img.one {
+		width: 120vmin;
+		height: 120vmin;
+		top: -15vmin;
+		left: 0vmin;
+	}
+}
+
+@media only screen and (orientation: portrait) {
+	img.two {
+		left: calc(60vmin - 60vmax);
+		top: -10vmax;
+		height: 120vmax;
+		width: 120vmax;
+	}
+	img.one {
+		left: -20vmin;
 		width: auto;
-		height: 60%;
-	}
-
-	img.one {
-		height: 50%;
-		bottom: 0%;
-		right: -20%;
-		content: url('../assets/statue.png');
-	}
-
-	img.two {
-		top: 5%;
-		left: -25%;
-		content: url('../assets/statue_h_2.png');
-	}
-}
-
-@media only screen and (orientation: portrait) {
-	image img {
-		width: 60%;
-		height: auto;
-	}
-
-	img.one {
-		bottom: -20%;
-		right: 5%;
-		content: url('../assets/statue.png');
-	}
-
-	img.two {
-		top: -20%;
-		left: 5%;
-		content: url('../assets/statue_v_2.png');
-	}
-}
-
-@media only screen and (orientation: portrait) {
-	img {
-		width: 60%;
-		height: auto;
-	}
-
-	img.one {
-		bottom: -20%;
-		right: 5%;
-		content: url('../assets/statue_v_1.png');
-	}
-
-	img.two {
-		top: -20%;
-		left: 5%;
-		content: url('../assets/statue_v_2.png');
+		min-height: 60vmax;
 	}
 }
 
@@ -97,8 +75,8 @@ nav {
 	position: relative;
 	width: calc(100vmin - var(--padding) * 2);
 	height: calc(100vmin - var(--padding) * 2);
-	max-width: 400px;
-	max-height: 400px;
+	max-width: 600px;
+	max-height: 600px;
 }
 
 nav {
