@@ -1,4 +1,0 @@
-[Obskkura](/obskkura)
-
-
-[Portfolio](/portfolio)
