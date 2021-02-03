@@ -28,7 +28,7 @@
     console.log(index, glyph)
 
     let autoplay = autoplayValue;
-    input.checked = false;
+    input.checked = autoplay;
 
     text.children[0].addEventListener("animationend", (e) => {
         if(autoplay){
