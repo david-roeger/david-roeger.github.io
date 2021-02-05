@@ -1,3 +1,6 @@
 [submodule "processing_showcase"]
 	path = processing_showcase
 	url = https://github.com/david-roeger/processing_showcase.git
+[submodule "portfolio"]
+	path = portfolio
+	url = https://github.com/david-roeger/portfolio.git
